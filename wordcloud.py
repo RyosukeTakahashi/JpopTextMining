@@ -17,7 +17,7 @@ def read_file_content(file_directory):
 
 def main():
 
-    artist_name = "AKB48"
+    artist_name = "尾崎豊"
     texts = list(get_text_files(artist_name))
     print(texts)
     all_texts = reduce(lambda a,b: a + b, texts)
