@@ -15,15 +15,15 @@ def read_file_content(file_directory):
     lyricfile.close()
     return lyric_str
 
-def main():
+def main(artist_name):
 
-    artist_name = "尾崎豊"
     texts = list(get_text_files(artist_name))
-    print(texts)
     all_texts = reduce(lambda a,b: a + b, texts)
-    all_texts_file = open(artist_name + ".txt", 'w', encoding="utf-8")
+    all_texts_file = open("minedLyrics/" + artist_name + ".txt", 'w', encoding="utf-8")
     all_texts_file.write(all_texts)
+    print("lyrics merged")
 
 
 if __name__ == '__main__':
-    main()
+    
+    main("スガシカオ") #必要なら引数与える

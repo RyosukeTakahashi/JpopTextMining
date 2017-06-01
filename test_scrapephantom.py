@@ -5,6 +5,7 @@ import re
 
 class TestScrapePhantom(unittest.TestCase):
 
+    @unittest.skip("time")
     def test_artist_suggest(self):
 
         search_term = "西野カナ"
@@ -30,6 +31,14 @@ class TestScrapePhantom(unittest.TestCase):
         expected = ["https://www.joysound.com/web/search/artist/3561?startIndex=220#songlist", \
                     "https://www.joysound.com/web/search/artist/3561?startIndex=240#songlist"]
         self.assertEqual(output[-2:], expected)
+
+    @unittest.skip("ok")
+    def test_get_song_count(self):
+        artist_tuple = ("AKB48", "43285")
+
+        output = scrapephantom.get_song_count_of_artist(artist_tuple)
+        expected = 570
+        self.assertEqual(output, expected)
 
     @unittest.skip("time saver")
     def test_get_all_song_urls_from_search_page_urls(self):
@@ -68,7 +77,7 @@ class TestScrapePhantom(unittest.TestCase):
     @unittest.skip("skippin for driver reading cost")
     def test_get_lyric_text(self):
 
-        directory = "/web/search/song/12554"
+        directory = "/web/search/song/12554" 
         output = scrapephantom.get_lyric_data(directory)
 
         expected = "Uh... Oh..."
@@ -89,8 +98,19 @@ class TestScrapePhantom(unittest.TestCase):
         print(output)
         self.assertEqual(expected, output)
 
+    
+
 
 if __name__ == '__main__':
+
+    # dir = "artists/平井堅"
+    # files = os.listdir(dir)
+    # for file in files:
+    #     print(file)
+    #     if "JOYSOUND" in file:
+    #         os.remove(dir + "/" +file)
+
+
     unittest.main()
 
 
