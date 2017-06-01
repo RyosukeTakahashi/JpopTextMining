@@ -99,7 +99,6 @@ def get_20urls_of_songs_from_searchpage(searchpage_url, driver):
     return song_urls
 
 def generate_textfiles(all_song_directories, artist_dir, driver):
-    print("running")
     lyrics_data = map(lambda directory: get_lyric_data(directory, driver), all_song_directories)
     print("start getting lyrics")
     for lyric in lyrics_data:

@@ -102,15 +102,6 @@ class TestScrapePhantom(unittest.TestCase):
 
 
 if __name__ == '__main__':
-
-    # dir = "artists/平井堅"
-    # files = os.listdir(dir)
-    # for file in files:
-    #     print(file)
-    #     if "JOYSOUND" in file:
-    #         os.remove(dir + "/" +file)
-
-
     unittest.main()
 
 
