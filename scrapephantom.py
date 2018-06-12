@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 import re
 from collections import OrderedDict
 import urllib.parse
-import wordcloud
 
 
 def get_driver():

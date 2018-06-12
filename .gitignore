@@ -1,1 +1,4 @@
 /artists/
+/__pycache__/
+/.vscode/
+./minedLyrics
